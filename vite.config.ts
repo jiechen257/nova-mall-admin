@@ -46,6 +46,9 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 					target: "https://mock.mengxuegu.com/mock/62abda3212c1416424630a45", // easymock
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/api/, "")
+				},
+				"/admin": {
+					target: "http://localhost:8080"
 				}
 			}
 		},
@@ -67,6 +70,7 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 			// * EsLint 报错信息显示在浏览器界面上
 			eslintPlugin(),
 			// * 是否生成包预览
+			// @ts-ignore
 			viteEnv.VITE_REPORT && visualizer(),
 			// * gzip compress
 			viteEnv.VITE_BUILD_GZIP &&

@@ -24,6 +24,7 @@ const LoginForm = (props: any) => {
 			setLoading(true);
 			loginForm.password = md5(loginForm.password);
 			const { data } = await loginApi(loginForm);
+			// setCookie(data!.token);
 			setToken(data?.access_token);
 			setTabsList([]);
 			message.success("登录成功！");

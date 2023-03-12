@@ -5,12 +5,14 @@ import { findAllBreadcrumb, getOpenKeys, handleRouter, searchRoute } from "@/uti
 import { setMenuList } from "@/redux/modules/menu/action";
 import { setBreadcrumbList } from "@/redux/modules/breadcrumb/action";
 import { setAuthRouter } from "@/redux/modules/auth/action";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { getMenuList } from "@/api/modules/login";
 import { connect } from "react-redux";
 import type { MenuProps } from "antd";
 import * as Icons from "@ant-design/icons";
 import Logo from "./components/Logo";
 import "./index.less";
+import menuListJSON from "@/config/menu.json";
 
 const LayoutMenu = (props: any) => {
 	const { pathname } = useLocation();
@@ -72,7 +74,8 @@ const LayoutMenu = (props: any) => {
 	const getMenuData = async () => {
 		setLoading(true);
 		try {
-			const { data } = await getMenuList();
+			// const { data } = await getMenuList();
+			const { data } = JSON.parse(menuListJSON as any);
 			if (!data) return;
 			setMenuList(deepLoopFloat(data));
 			// 存储处理过后的所有面包屑导航栏到 redux 中
