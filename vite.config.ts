@@ -46,10 +46,10 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 					target: "https://mock.mengxuegu.com/mock/62abda3212c1416424630a45", // easymock
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/api/, "")
-				},
-				"/admin": {
-					target: "http://localhost:8080"
 				}
+				// "/admin": {
+				// 	target: "http://localhost:8080"
+				// }
 			}
 		},
 		// plugins
