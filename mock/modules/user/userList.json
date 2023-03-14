@@ -1,0 +1,30 @@
+{
+	"errno": 0,
+	"data": {
+		"total": 1,
+		"pages": 1,
+		"limit": 20,
+		"page": 1,
+		"list": [
+			{
+				"id": 1,
+				"username": "user123",
+				"password": "$2a$10$lTu9qi0hr19OC800Db.eludFr0AXuJUSrMHi/iPYhKRlPFeqJxlye",
+				"gender": 1,
+				"lastLoginTime": "2019-04-20 22:17:43",
+				"lastLoginIp": "0:0:0:0:0:0:0:1",
+				"userLevel": 1,
+				"nickname": "user123",
+				"mobile": "123-1234-1233",
+				"avatar": "",
+				"weixinOpenid": "",
+				"sessionKey": "",
+				"status": 0,
+				"addTime": "2019-04-20 22:17:43",
+				"updateTime": "2019-04-20 22:17:43",
+				"deleted": false
+			}
+		]
+	},
+	"errmsg": "成功"
+}

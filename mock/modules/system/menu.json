@@ -8,6 +8,18 @@
 		},
 		{
 			"icon": "TableOutlined",
+			"title": "客户管理",
+			"path": "/user",
+			"children": [
+				{
+					"icon": "AppstoreOutlined",
+					"path": "/user/userList",
+					"title": "客户"
+				}
+			]
+		},
+		{
+			"icon": "TableOutlined",
 			"title": "超级表格",
 			"path": "/proTable",
 			"children": [

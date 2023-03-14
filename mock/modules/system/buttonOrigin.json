@@ -1,0 +1,10 @@
+{
+	"code": 200,
+	"data": {
+		"useHooks": {
+			"add": true,
+			"delete": true
+		}
+	},
+	"msg": "成功"
+}
