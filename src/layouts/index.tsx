@@ -3,13 +3,13 @@ import { Outlet } from "react-router-dom";
 import { Layout } from "antd";
 import { setAuthButtons } from "@/redux/modules/auth/action";
 import { updateCollapse } from "@/redux/modules/menu/action";
-import { getAuthorButtons } from "@/api/modules/login";
 import { connect } from "react-redux";
 import LayoutMenu from "./components/Menu";
 import LayoutHeader from "./components/Header";
 import LayoutTabs from "./components/Tabs";
 import LayoutFooter from "./components/Footer";
 import "./index.less";
+import buttonJSON from "../../mock/modules/system/button.json";
 
 const LayoutIndex = (props: any) => {
 	const { Sider, Content } = Layout;
@@ -17,7 +17,8 @@ const LayoutIndex = (props: any) => {
 
 	// 获取按钮权限列表
 	const getAuthButtonsList = async () => {
-		const { data } = await getAuthorButtons();
+		const { data } = buttonJSON;
+		// const { data } = await getAuthorButtons();
 		setAuthButtons(data);
 	};
 

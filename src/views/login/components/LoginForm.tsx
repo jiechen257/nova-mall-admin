@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button, Form, Input, message } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Login } from "@/api/interface";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { loginApi } from "@/api/modules/login";
 import { HOME_URL } from "@/config/config";
 import { connect } from "react-redux";
@@ -10,6 +11,7 @@ import { setToken } from "@/redux/modules/global/action";
 import { useTranslation } from "react-i18next";
 import { setTabsList } from "@/redux/modules/tabs/action";
 import { UserOutlined, LockOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import loginJSON from "../../../../mock/modules/system/login.json";
 
 const LoginForm = (props: any) => {
 	const { t } = useTranslation();
@@ -23,7 +25,7 @@ const LoginForm = (props: any) => {
 		try {
 			setLoading(true);
 			loginForm.password = md5(loginForm.password);
-			const { data } = await loginApi(loginForm);
+			const { data } = loginJSON;
 			// setCookie(data!.token);
 			setToken(data?.access_token);
 			setTabsList([]);

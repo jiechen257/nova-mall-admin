@@ -12,7 +12,7 @@ import type { MenuProps } from "antd";
 import * as Icons from "@ant-design/icons";
 import Logo from "./components/Logo";
 import "./index.less";
-import menuListJSON from "@/config/menu.json";
+import menuListJSON from "../../../../mock/modules/system/menu.json";
 
 const LayoutMenu = (props: any) => {
 	const { pathname } = useLocation();
